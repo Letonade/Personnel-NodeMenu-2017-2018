@@ -3,21 +3,25 @@
 ** On se fait une ptite lib de lancement programme.
 */
 
+// Démarrage de firefox.
 firefox = function(){
     let exec = require('child_process').exec;
     exec('C:\\Users\\CONTE\\Documents\\FirefoxPortable64\\App\\Firefox64\\firefox.exe').unref();
 };
 
+// Appel de l'explorer où l'ont peut indiquer le chemin.
 explorer = function(where){
     let exec = require('child_process').exec;
     exec('C:\\Windows\\explorer.exe '+where).unref();
 }
 
-const explorerToLaunch = () => {explorer("C:\\Users\\CONTE\\Documents\\NodeJStest\\Work Document")};
+// Liste des chemins pour l'explorer.
+const expToLaunch = () => {explorer("C:\\Users\\CONTE\\Documents\\NodeJStest\\Work Document")};
 
+// Exportations
 module.exports = {
     firefox : firefox,
-    explorerToLaunch : explorerToLaunch
+    expToLaunch : expToLaunch,
 };
 
 

@@ -31,7 +31,7 @@ showExp = function () {
     // Affichage du menu
     MyLib.ME("Explorers",txt);
     MyLib.QE("You'r choice ?", showExp, [
-        [MyRun.explorerToLaunch,showExp],
+        [MyRun.expToLaunch,showExp],
         showMain,
         process.exit
         ]);

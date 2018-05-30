@@ -4,9 +4,9 @@ l'application principale est App.js
 
 PROBLEME ACTUEL :
 - Bloquant :
-    Dans cette version, un choix possédant plusieurs action éffectue la première puis ce bloque.
+    Aucun pour le moment.
 - Non-Bloquant :
-    Il est souhaité que le lancement que lorsqu'une action s'effectue le focus reste sur l'invite de commande.
+    Il est souhaité de garder le focus su l'invite de commande peut-importe l'action.
 
 /*  ___  _____  _  _  ____  ____
    / __)(  _  )( \( )(_  _)( ___)

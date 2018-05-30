@@ -6,7 +6,7 @@
 var readline = require('readline'),
     menu;
 
-// focntion enjoliveur de menu
+// fonction enjoliveur de menu
 MenuEnhancer = function (title,[...z]){
     // Variable d'accumulation
     let text;
@@ -32,15 +32,15 @@ Questionary = function (quest,deaf,[...z]){
         input: process.stdin,
         output: process.stdout
     });
-    // la question
+    // La question
     menu.question(quest, function(input) {
-
+        // On effectue les actions demandé par le user.
         if (input-1 <= z.length -1 && input-1 >= 0) {
             if (!Array.isArray(z[input-1])) {z[input-1]();}
             else{
-                for (var i = 0; i < z[input-1].length - 1; i++) {
+                for (var i = 0; i < z[input-1].length; i++) {
                 z[input-1][i]();
-                console.log("\n"+i + " : " + z[input-1][i] + "\n");
+                //console.log("\n"+i + " : " + z[input-1][i] + "\n");
                 };
             };
         }else deaf();
