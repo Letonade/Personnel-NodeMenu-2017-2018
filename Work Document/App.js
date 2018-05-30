@@ -11,12 +11,14 @@ showMain = function () {
     let txt =[];
     txt.push("Go to explorer's");
     txt.push("Start Firefox");
+    txt.push("Start Chronotime");
     txt.push("Exit");
     // Affichage du menu
     MyLib.ME("",txt);
     MyLib.QE("You'r choice ?", showMain, [
         showExp,
         [MyRun.firefox, showMain],
+        [MyRun.chronotime, showMain],
         process.exit
         ]);
 }
@@ -26,12 +28,14 @@ showExp = function () {
     // Création du tableau de texte
     let txt =[];
     txt.push("To dev");
+    txt.push("To Access Application");
     txt.push("Go back to Main");
     txt.push("Exit");
     // Affichage du menu
     MyLib.ME("Explorers",txt);
     MyLib.QE("You'r choice ?", showExp, [
         [MyRun.expToLaunch,showExp],
+        [MyRun.expToAccessApp,showExp],
         showMain,
         process.exit
         ]);

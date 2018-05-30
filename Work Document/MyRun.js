@@ -9,6 +9,11 @@ firefox = function(){
     exec('C:\\Users\\CONTE\\Documents\\FirefoxPortable64\\App\\Firefox64\\firefox.exe').unref();
 };
 
+chronotime = function(){
+    let exec = require('child_process').exec;
+    exec('"C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe" https://allianz-chronotime.gfi.fr/chronotime').unref();
+};
+
 // Appel de l'explorer où l'ont peut indiquer le chemin.
 explorer = function(where){
     let exec = require('child_process').exec;
@@ -17,11 +22,14 @@ explorer = function(where){
 
 // Liste des chemins pour l'explorer.
 const expToLaunch = () => {explorer("C:\\Users\\CONTE\\Documents\\NodeJStest\\Work Document")};
+const expToAccessApp = () => {explorer("C:\\Users\\CONTE\\Desktop\\Applicatif_Docs\\Côté_Access_2017-2018")};
 
 // Exportations
 module.exports = {
     firefox : firefox,
+    chronotime : chronotime,
     expToLaunch : expToLaunch,
+    expToAccessApp :expToAccessApp
 };
 
 

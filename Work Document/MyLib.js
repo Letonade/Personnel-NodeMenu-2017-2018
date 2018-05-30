@@ -39,8 +39,8 @@ Questionary = function (quest,deaf,[...z]){
             if (!Array.isArray(z[input-1])) {z[input-1]();}
             else{
                 for (var i = 0; i < z[input-1].length; i++) {
-                z[input-1][i]();
-                //console.log("\n"+i + " : " + z[input-1][i] + "\n");
+                    z[input-1][i]();
+                    //console.log("\n"+i + " : " + z[input-1][i] + "\n");
                 };
             };
         }else deaf();
